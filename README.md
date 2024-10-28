@@ -1,3 +1,4 @@
+![Build Status](https://github.com/Nifaev/testing2/actions/workflows/build.yml/badge.svg)
 # testing2
 Проект для Лабораторной работы № 2 в рамках курса Тестирование ПО
 ## Класс Figure:
