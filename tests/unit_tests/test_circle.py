@@ -1,6 +1,6 @@
 import math
 import pytest
-from main.circle import Circle
+from main.circle import *
 
 
 def test_circle_init():
