@@ -1,4 +1,4 @@
-
+[![Start tests](https://github.com/Nifaev/testing2/actions/workflows/actions.yml/badge.svg)](https://github.com/Nifaev/testing2/actions/workflows/actions.yml)
 # testing2
 Проект для Лабораторной работы № 2 в рамках курса Тестирование ПО
 ## Класс Figure:
