@@ -1,7 +1,9 @@
 import math
 
+from main.figure import Figure
 
-class Circle:
+
+class Circle(Figure):
     radius = float()
 
     def __init__(self, radius):
