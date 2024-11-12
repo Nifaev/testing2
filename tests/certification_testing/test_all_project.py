@@ -28,7 +28,22 @@ def test_geometry_total_perimeter_all_figures():
     assert pytest.approx(g.total_perimeter()) == total_p
 
 
-def test_triangle_fit_into():
+def test_triangle_fit_into_noone_figures():
+    g = Geometry()
+    assert g.fit_into_figure(Triangle(1, 1, 1)) == []
+
+
+def test_rectangle_fit_into_noone_figures():
+    g = Geometry()
+    assert g.fit_into_figure(Rectangle(2, 4)) == []
+
+
+def test_circle_fit_into_noone_figures():
+    g = Geometry()
+    assert g.fit_into_figure(Circle(3)) == []
+
+
+def test_triangle_fit_into_three_figures():
     g = Geometry()
     g.add_figure(Circle(3))
     g.add_figure(Rectangle(3, 5))
@@ -37,7 +52,7 @@ def test_triangle_fit_into():
     assert result == [True, True, True]
 
 
-def test_rectangle_fit_into():
+def test_rectangle_fit_into_three_figures():
     g = Geometry()
     g.add_figure(Circle(3))
     g.add_figure(Rectangle(2, 4))
@@ -46,11 +61,10 @@ def test_rectangle_fit_into():
     assert result == [True, False, False]
 
 
-def test_circle_fit_into():
+def test_circle_fit_into_three_figures():
     g = Geometry()
     g.add_figure(Circle(3))
     g.add_figure(Rectangle(2, 4))
     g.add_figure(Triangle(3, 4, 5))
     result = g.fit_into_figure(Circle(1))
     assert result == [True, True, True]
-
