@@ -33,7 +33,7 @@ jobs:
       - name: Run tests with pytest
         run: |
           export PYTHONPATH=$PWD
-          pytest --cov=./main/ --cov-report=xml --cov-report=term-missing ./tests/
+          pytest --cov=./main/ ./tests/ --cov-report=xml --cov-report=term-missing
 
       - name: Upload coverage report to Coveralls
         run: coveralls
