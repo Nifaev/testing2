@@ -31,14 +31,13 @@ jobs:
       - name: Run tests with pytest
         run: |
           export PYTHONPATH=$PWD
-#          pytest ./tests/
           pytest --cov=./main/ ./tests/
 
       - name: Upload coverage report to Coveralls
         run: coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          
+
 #
 #      - name: SonarCloud Scan
 #        uses: SonarSource/sonarcloud-github-action@master
